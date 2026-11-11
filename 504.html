@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error 504: Tiempo de espera agotado | IPCA Consultores</title>
+  <meta name="description" content="La página demoró más de lo normal en responder. Intenta de nuevo en unos minutos o escríbenos.">
+    <link rel="canonical" href="https://ipca.cl/504.html">
+
+  <meta property="og:title" content="Error 504: Tiempo de espera agotado | IPCA Consultores">
+  <meta property="og:description" content="La página demoró más de lo normal en responder. Intenta de nuevo en unos minutos o escríbenos.">
+  <meta property="og:image" content="https://ipca.cl/assets/ipca_opengraph.png">
+  <meta property="og:url" content="https://ipca.cl/504.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="/assets/ipca_favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="/" aria-label="IPCA Consultores, ir al inicio"><img src="/assets/logo.svg" alt="IPCA Consultores" width="150" height="46"></a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/consultoria-financiera/">Consultoría financiera</a></li>
+        <li><a href="/contabilidad-pymes/">Contabilidad</a></li>
+        <li><a href="/sociedades-de-profesionales/">Sociedades</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="/contacto/">Comunícate con nosotros</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container error-page">
+      <div class="code">504</div>
+      <h1>El servidor tardó demasiado en responder</h1>
+      <p class="lead" style="margin-inline:auto">La página demoró más de lo normal en responder. Intenta de nuevo en unos minutos o escríbenos.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/">Volver al inicio</a>
+        <a class="btn btn-outline" href="https://wa.me/56933312344?text=Hola%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20con%20IPCA%20Consultores.">Escribir por WhatsApp</a>
+      </div>
+      <p class="error-note">También puedes escribirnos a <a href="mailto:contacto@ipca.cl">contacto@ipca.cl</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/assets/logo_blanco.svg" alt="IPCA Consultores" width="150" height="54">
+          <p>Consultoría financiera y contable para empresas y profesionales independientes.</p>
+        </div>
+        <div>
+          <h2>Servicios</h2>
+          <ul>
+            <li><a href="/consultoria-financiera/">Consultoría financiera</a></li><li><a href="/contabilidad-pymes/">Contabilidad para pymes</a></li><li><a href="/sociedades-de-profesionales/">Sociedades de profesionales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <ul>
+            <li><a href="mailto:contacto@ipca.cl">contacto@ipca.cl</a></li>
+            <li><a href="https://wa.me/56933312344?text=Hola%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20con%20IPCA%20Consultores.">WhatsApp +56 9 3331 2344</a></li>
+            <li>Villa Alemana y alrededores · atención online</li>
+            <li>Lunes a viernes, 9:00 a 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 IPCA Consultores · Todos los derechos reservados · <a href="/privacidad/">Política de privacidad</a></div>
+    </div>
+  </footer>
+
+  <script>
+    var hb = document.getElementById('hamburger'), nl = document.getElementById('navLinks');
+    hb.addEventListener('click', function () {
+      var open = nl.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open);
+    });
+    var hd = document.querySelector('.site-header.over');
+    if (hd) {
+      var stick = function () { hd.classList.toggle('is-stuck', window.scrollY > 80); };
+      stick(); addEventListener('scroll', stick, { passive: true });
+    }
+  </script>
+</body>
+</html>

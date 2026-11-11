@@ -1,0 +1,1 @@
+Íconos de Lucide (https://lucide.dev), licencia ISC. Se incrustan en el HTML al generar el sitio.

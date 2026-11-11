@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.81 260.89">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .cls-3 {
+        font-family: DMSans-Medium, 'DM Sans';
+        font-size: 31.32px;
+        font-variation-settings: 'opsz' 14, 'wght' 500;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-5 {
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        font-family: EBGaramondRoman-SemiBold, 'EB Garamond';
+        font-size: 81.84px;
+        font-variation-settings: 'wght' 600;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        stroke: #9c8616;
+        stroke-linecap: round;
+      }
+
+      .cls-6 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-5 {
+        font-family: EBGaramondRoman-Medium, 'EB Garamond';
+        font-size: 106.73px;
+        font-variation-settings: 'wght' 500;
+        letter-spacing: -.15em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: .1em;
+      }
+
+      .cls-9 {
+        letter-spacing: .1em;
+      }
+
+      .cls-10 {
+        letter-spacing: .1em;
+      }
+
+      .cls-11 {
+        letter-spacing: .03em;
+      }
+
+      .cls-12 {
+        letter-spacing: .02em;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M27.82,137.22c0-46.97,38.07-85.04,85.04-85.04s85.04,38.07,85.04,85.04-38.07,85.04-85.04,85.04"/>
+  <path class="cls-1" d="M97.31,220.84c-33.57-6.2-60.23-32.12-67.51-65.3"/>
+  <text class="cls-5" transform="translate(71.82 173.08)"><tspan x="0" y="0">I P</tspan></text>
+  <circle class="cls-1" cx="112.86" cy="137.22" r="98.98"/>
+  <g>
+    <text class="cls-4" transform="translate(228.87 157.29)"><tspan class="cls-8" x="0" y="0">IP</tspan><tspan class="cls-10" x="93.7" y="0">C</tspan><tspan class="cls-9" x="159.5" y="0">A</tspan></text>
+    <text class="cls-3" transform="translate(228.87 187.83)"><tspan class="cls-12" x="0" y="0">CONSU</tspan><tspan class="cls-6" x="112.16" y="0">L</tspan><tspan class="cls-7" x="126.23" y="0">T</tspan><tspan class="cls-11" x="143.92" y="0">ORES</tspan></text>
+  </g>
+</svg>
