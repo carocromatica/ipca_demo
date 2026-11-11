@@ -5,6 +5,7 @@ Uso (desde la carpeta del sitio):  python3 _build/build.py
 Edita los textos aquí y vuelve a ejecutar; sobrescribe los .html generados.
 """
 import json
+import re
 from datetime import date
 from pathlib import Path
 from html import escape
@@ -734,7 +735,32 @@ def server_error(code):
     return h + FOOTER
 
 
+def relativize(html, rel):
+    """Convierte rutas que empiezan con / en rutas relativas a la página.
+
+    Así la demo funciona también en GitHub Pages, donde el sitio vive en
+    /ipca_demo/ y no en la raíz del dominio. No toca URLs absolutas (https://).
+    """
+    prefix = "../" * rel.count("/") or "./"
+
+    def fix(u):
+        u = u.strip()
+        return prefix + u[1:] if u.startswith("/") and not u.startswith("//") else u
+
+    def attr(m):
+        name, val = m.group(1), m.group(2)
+        if name == "srcset":
+            val = ", ".join(" ".join([fix(parts[0])] + parts[1:]) for parts in (p.split() for p in val.split(",") if p.strip()))
+        else:
+            val = fix(val)
+        return f'{name}="{val}"'
+
+    return re.sub(r'\b(href|src|srcset)="([^"]*)"', attr, html)
+
+
 def write(rel, content):
+    if rel.endswith(".html"):
+        content = relativize(content, rel)
     p = ROOT / rel
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(content, encoding="utf-8")

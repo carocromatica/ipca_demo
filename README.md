@@ -2,6 +2,8 @@
 
 Prototipo del sitio de **IPCA Consultores** (Villa Alemana, Chile), una consultora financiera y contable. Es una demo para revisión: no es la versión en vivo de ipca.cl.
 
+Los enlaces, estilos e imágenes usan rutas relativas, para que la demo funcione al publicarla en GitHub Pages (`/ipca_demo/`). Las direcciones de SEO (canonical, Open Graph y datos estructurados) siguen apuntando a `https://ipca.cl`.
+
 Páginas incluidas: inicio, consultoría financiera, contabilidad para pymes, sociedades de profesionales, contacto, política de privacidad y páginas de error (404, 500, 502, 503 y 504).
 
 ## Checklist SEO
