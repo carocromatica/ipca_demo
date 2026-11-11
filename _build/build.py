@@ -214,7 +214,7 @@ def add_icons(html):
     return re.sub(r"<h2>(.*?)</h2>", rep, html)
 
 
-def service_page(path, title, desc, name, h1, lead, body, faq, aside_title, aside_text, hero_img=None, aside_html=None, cards=None, cards_heading='', intro=None):
+def service_page(path, title, desc, name, h1, lead, body, faq, aside_title, aside_text, hero_img=None, aside_html=None, cards=None, cards_heading='', intro=None, extra_section='', cta_title=None):
     body = add_icons(body)
     aside_html = add_icons(aside_html) if aside_html else aside_html
     default_aside = f'''<h3>{aside_title}</h3>
@@ -291,21 +291,21 @@ def service_page(path, title, desc, name, h1, lead, body, faq, aside_title, asid
     </div>
 
 {main_html}
-{cards_html}{after_cards}    <section class="section-alt">
+{cards_html}{after_cards}{extra_section}    <section class="section-alt">
       <div class="container">
         <h2>Preguntas frecuentes</h2>
         {faq_html(faq)}
       </div>
     </section>
 
-{cta_band()}
+{cta_band(cta_title) if cta_title else cta_band()}
 {related(path)}  </main>
 """
     return html + FOOTER
 
 
-ASIDE_CONTADOR = '''<h2>¿Contador o asesor financiero?</h2>
-          <p>El contador registra y declara lo que ya pasó, y cumple con la normativa. El asesor financiero mira hacia adelante: cuánto necesitas, cuándo y cómo financiarlo. Cuando una empresa escala, suele necesitar ambos. En IPCA podemos hacer las dos cosas y coordinarlas con tu contador actual si prefieres mantenerlo.</p>
+ASIDE_CONTADOR = '''<h2>Contador vs asesor financiero: qué necesitas</h2>
+          <p>El contador registra y declara lo que ya pasó, y cumple con la normativa. El asesor financiero mira hacia adelante: cuánto necesitas, cuándo y cómo financiarlo. La duda de fondo suele ser asesoría contable o asesoría financiera, y cuando una empresa escala, normalmente necesita ambas. También depende de si te conviene un contador interno o externo: podemos coordinarnos con tu contador actual si prefieres mantenerlo.</p>
           <div class="callout"><p>¿No sabes cuál necesitas? Conversemos: en la primera reunión revisamos tu situación y te orientamos con honestidad.</p></div>'''
 
 
@@ -446,24 +446,35 @@ def consultoria():
     faq = [
         ("¿Cuánto cuesta una asesoría financiera para empresas?",
          "Depende del tamaño de la empresa, la complejidad y si el trabajo es puntual o recurrente. Después de la primera reunión te enviamos una propuesta con alcance y valor definidos. La primera consulta tiene costo."),
-        ("¿Cuál es la diferencia entre un contador y un asesor financiero?",
-         "El contador se ocupa del registro contable y el cumplimiento tributario. El asesor financiero usa esa información para proyectar, planificar y recomendar decisiones."),
+        ("¿Qué es un CFO externo y cuándo conviene?",
+         "Es un responsable de las finanzas que trabaja para tu empresa de forma recurrente, sin ser parte de la planilla de jornada completa. Conviene cuando necesitas planificación y seguimiento de indicadores, pero aún no justificas un gerente financiero de tiempo completo."),
         ("¿Trabajan con empresas fuera de Villa Alemana?",
-         "Sí. Atendemos en la región de Valparaíso y Santiago, y online al resto del país por videollamada, WhatsApp y correo."),
+         "Sí. Atendemos Villa Alemana, Quilpué, Viña del Mar, Valparaíso y otras localidades de la Región de Valparaíso, y online al resto del país por videollamada, WhatsApp y correo."),
+        ("¿Tienen una oficina para ir a verlos?",
+         "No atendemos en oficina: vamos a tu empresa o nos reunimos por videollamada. Escríbenos por WhatsApp o agenda una reunión y coordinamos."),
         ("¿Qué necesito para partir?",
          "Tus estados financieros o registros más recientes, si los tienes, y una idea de lo que quieres resolver. Si no tienes todo ordenado, también te ayudamos a partir de ahí."),
     ]
+    donde = """    <section>
+      <div class="container">
+        <div class="intro-center">
+          <h2>Dónde trabajamos</h2>
+          <p>Prestamos servicios de consultoría financiera a empresas y profesionales de Villa Alemana, Quilpué, Viña del Mar, Valparaíso y otras localidades de la Región de Valparaíso, con visita a tu empresa, y online al resto del país. Trabajamos sin oficina de atención al público, de lunes a viernes de 9:00 a 18:00.</p>
+        </div>
+      </div>
+    </section>
+"""
     return service_page(
         "/consultoria-financiera/",
         "IPCA - Consultoría financiera para empresas en crecimiento",
-        "Consultoría y asesoría financiera para empresas y pymes: presupuestos, flujo de caja y control de gestión. Villa Alemana y online. Agenda una reunión.",
+        "Consultoría financiera en Villa Alemana, Valparaíso y online: presupuestos, flujo de caja y CFO externo. Agenda una reunión de diagnóstico.",
         "Consultoría financiera",
         "Consultoría y asesoría financiera para empresas",
         "Información financiera clara para decidir con respaldo: presupuestos, flujo de caja y control de gestión, con una mirada gerencial.",
         body, faq, "Hablemos de tus números", "Cuéntanos qué necesitas resolver y te orientamos en la primera reunión.",
         aside_html=ASIDE_CONTADOR,
         intro=("Finanzas claras que se traducen en decisiones",
-               "Ordenamos la información de tu empresa para que sepas dónde estás parado, cuánta caja tendrás y qué decisiones conviene tomar primero. Trabajamos con lenguaje simple y con foco en lo que mueve tu negocio.",
+               "La consultoría financiera empresarial ordena la información de tu empresa para que sepas dónde estás, cuánta caja tendrás y qué decisión conviene tomar primero. Si buscas un asesor financiero para empresas que te hable simple y se enfoque en lo que mueve tu negocio, partimos por ahí.",
                [("chart-column", "Presupuestos y proyecciones financieras"),
                 ("banknote", "Flujo de caja y control de gestión"),
                 ("landmark", "Gestión operativa de tesorería"),
@@ -471,12 +482,13 @@ def consultoria():
                 ("file-search", "Apoyo en compra de empresas (due diligence)")]),
         cards_heading="Nuestros servicios están para ayudarte",
         cards=[
-            ("Consultoría financiera para pymes", "<p>Si tu pyme ya factura de manera estable, pero las decisiones se toman “a ojo”, una consultoría financiera te da un tablero claro: márgenes, necesidades de capital y escenarios. No necesitas un área de finanzas completa para partir.</p>"),
+            ("Consultoría financiera para pymes", "<p>Si tu pyme ya factura de manera estable, pero las decisiones se toman “a ojo”, la consultoría financiera para pymes te da un tablero claro: márgenes, necesidades de capital y escenarios. No necesitas un área de finanzas completa para partir.</p>"),
             # Confirmado con el cliente (2026-11-10): sí ofrece dirección financiera externa recurrente.
-            ("Dirección financiera externa (CFO externo)", "<p>Para empresas que necesitan una mirada gerencial en finanzas, pero no justifican un gerente financiero de jornada completa: nos hacemos cargo de la planificación, el seguimiento de indicadores y el apoyo en decisiones, de forma recurrente.</p>"),
-            ("Asesoría financiera para profesionales independientes", '<p>Es la consulta que más nos hacen: profesionales que facturan sobre los 5 millones mensuales y quieren ordenar impuestos, estructura y proyección. Revisamos tu caso y te decimos si te conviene seguir como persona natural o dar el paso a una sociedad (<a href="/sociedades-de-profesionales/">lee más sobre sociedades de profesionales</a>).</p>'),
+            ("CFO externo: gerente financiero externo para tu empresa", "<p>Un CFO externo para pymes, también llamado gerente financiero externo o gerencia financiera fraccional, es para empresas que necesitan mirada gerencial en finanzas pero no justifican un gerente de jornada completa. Nos hacemos cargo de la planificación, el seguimiento de indicadores y el apoyo en decisiones, de forma recurrente.</p>"),
+            ("Asesoría financiera para profesionales independientes", '<p>Es la consulta que más nos hacen: asesoría financiera para independientes que facturan sobre los 5 millones mensuales y quieren ordenar impuestos, estructura y proyección. Revisamos tu caso y te decimos si te conviene seguir como persona natural o dar el paso a una sociedad (<a href="/sociedades-de-profesionales/">lee más sobre sociedades de profesionales</a>).</p>'),
         ],
-        hero_img=("/assets/consultoria-pymes.webp", "Dos personas revisando gráficos financieros impresos en una reunión de consultoría"))
+        hero_img=("/assets/consultoria-pymes.webp", "Dos personas revisando gráficos financieros impresos en una reunión de consultoría"),
+        extra_section=donde, cta_title="Conversemos sobre la estructura que tu empresa necesita")
 
 
 def contabilidad():
