@@ -44,11 +44,11 @@ Contraste con el mapa de keywords (frases exactas, sin distinguir tildes; las va
 
 | Página | Keyword principal del mapa | En title y H1 | Keywords del mapa en el texto |
 |---|---|---|---|
-| `/consultoria-financiera/` | consultoría financiera | sí | 5 de 23 |
+| `/consultoria-financiera/` | consultoría financiera | sí | 16 de 23 |
 | `/contabilidad-pymes/` | contador para pymes | sí (title) y la variante "contabilidad para pymes" (H1) | 4 de 24 |
 | `/sociedades-de-profesionales/` | sociedad de profesionales | sí | 4 de 11 |
 
-- Lo que falta son variantes y preguntas del mapa, por ejemplo: "contador villa alemana" y "contabilidad mensual para pymes" (contabilidad), "requisitos de una sociedad de profesionales" y "boleta de honorarios o sociedad" (sociedades), y "cfo externo para pymes" y "contador vs asesor financiero" (consultoría).
+- Lo que falta son variantes y preguntas del mapa, por ejemplo: "contador villa alemana" y "contabilidad mensual para pymes" (contabilidad), "requisitos de una sociedad de profesionales" y "boleta de honorarios o sociedad" (sociedades), y, en consultoría, "cuánto cuesta un contador en Chile" y "asesoría financiera para profesionales independientes en Chile".
 - Las keywords de emprendedores y de inicio de actividades no se agregan por ahora: el cliente busca empresas consolidadas en crecimiento, y eso se decide para la entrega final.
 
 Otros pendientes de esta sección:
