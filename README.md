@@ -35,7 +35,19 @@ Estado al 10/11/2026. `[x]` = verificado en el código de este repositorio. `[ ]
 - [x] Todos los title de 60 caracteres o menos
 - [x] Open Graph y Twitter card en todas las páginas
 - [ ] Alargar la meta de `/contacto/` a 140 caracteres o más
-- [ ] Contrastar title, H1 y H2 de cada servicio con el mapa de keywords
+- [x] Title, H1 y H2 de cada servicio contrastados con el mapa de keywords (10/11/2026). Resultado en la tabla de abajo
+- [ ] Sumar al texto las variantes del mapa que todavía no aparecen (ver tabla)
+Contraste con el mapa de keywords (frases exactas, sin distinguir tildes; las variantes incluyen frases sin datos de volumen):
+
+| Página | Keyword principal del mapa | En title y H1 | Keywords del mapa en el texto |
+|---|---|---|---|
+| `/consultoria-financiera/` | consultoría financiera | sí | 5 de 23 |
+| `/contabilidad-pymes/` | contador para pymes | sí (title) y la variante "contabilidad para pymes" (H1) | 4 de 24 |
+| `/sociedades-de-profesionales/` | sociedad de profesionales | sí | 4 de 11 |
+
+- Lo que falta son variantes y preguntas del mapa, por ejemplo: "contador villa alemana" y "contabilidad mensual para pymes" (contabilidad), "requisitos de una sociedad de profesionales" y "boleta de honorarios o sociedad" (sociedades), y "cfo externo para pymes" y "contador vs asesor financiero" (consultoría).
+- Las keywords de emprendedores y de inicio de actividades no se agregan por ahora: el cliente busca empresas consolidadas en crecimiento, y eso se decide para la entrega final.
+
 - [ ] Explicar IFRS y SII la primera vez que aparecen en cada página
 - [ ] Imagen Open Graph distinta por servicio (opcional)
 
