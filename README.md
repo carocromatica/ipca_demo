@@ -85,12 +85,12 @@ Otros pendientes de esta sección:
 - [ ] `srcset` para móvil en las imágenes grandes
 - [ ] Reducir o quitar el PNG de respaldo del hero (1,9 MB)
 - [ ] Autoalojar o precargar las fuentes
-- [x] PageSpeed Insights de la home (10/11/2026): en celulares, rendimiento 96 y accesibilidad, recomendaciones y SEO en 100; en escritorio, 100 en las cuatro categorías
-- [ ] Medir en PageSpeed Insights los 3 servicios y comparar antes y después
+- [x] PageSpeed Insights de la home y de la página de consultoría (10 y 11/11/2026): en celulares, rendimiento 96 y accesibilidad, recomendaciones y SEO en 100; en escritorio, 100 en las cuatro categorías
+- [ ] Medir en PageSpeed Insights contabilidad, sociedades, contacto y privacidad, y comparar antes y después
 
 ### 6. Accesibilidad (en proceso)
 
-- [x] Medición automática de accesibilidad en la home: 100 en celulares y escritorio (no reemplaza la revisión manual de abajo)
+- [x] Medición automática de accesibilidad en la home y en consultoría: 100 en celulares y escritorio (no reemplaza la revisión manual de abajo)
 - [ ] Corregir el contraste del texto dorado de la página 404 (2,8:1; el mínimo es 4,5:1)
 - [ ] Botones y enlaces de al menos 44 px de alto
 - [ ] Foco visible y menú que cierra con la tecla Escape
